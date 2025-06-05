@@ -22,7 +22,8 @@ const fetchData = async (url) => {
    * @returns Promise| Error
    */
 const getOne = async (id, entitySlug, apiRoot) => {
-    const url = `${apiRoot}${entitySlug}/${id}`;
+    const url = id === 'random' ? `${apiRoot}${entitySlug}/random` : 
+    `${apiRoot}${entitySlug}/${id}`;
     return await fetchData(url);
 };
 
@@ -33,8 +34,8 @@ const getOne = async (id, entitySlug, apiRoot) => {
  * @returns Promise | Error>
  */
 const getList = async (entitySlug, apiRoot) => {
-    const url = `${apiRoot}${entitySlug}`;
-    return await fetchData(url);
+   const url = `${apiRoot}${entitySlug}`;
+  return await fetchData(url);
 };
 
 /**
