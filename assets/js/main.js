@@ -4,8 +4,8 @@ import { getList, getOne, getListBasedOnPaginationPage } from './api.js';
 // global variables
 
 // api root
-let apiRoot = 'https://www.fruityvice.com/api/';
-let selectedCollection = 'fruit';
+let apiRoot = 'https://api.openbrewerydb.org/v1/';
+let selectedCollection = 'breweries';
 
 /**
  * Function to initialize the application
@@ -21,10 +21,10 @@ async function init() {
  */
 async function handleRequest() {
   // const fruit = await getOne('random',selectedCollection, apiRoot);
-  const fruits = await getList(selectedCollection, apiRoot);
+  const breweries = await getList(selectedCollection, apiRoot);
   // console.log(fruit);
-  console.log(fruits);
-  update(fruits);
+  console.log(breweries);
+  update(breweries);
 }
 
 /**
@@ -32,17 +32,17 @@ async function handleRequest() {
  */
 function update(data) {
   const breweries = data.data; // Assuming the data is returned as an array with a single object
-  const breweriesList = document.getElementById('fruits');
+  const breweriesList = document.getElementById('breweries');
   breweriesList.innerHTML = ''; // Clear any existing content
 
   // Create a new div to display the brewery details
-  if (Array.isArray(fruits)) {
+  if (Array.isArray(breweries)) {
     breweries.forEach(brewery => {
-      const fruitDiv = document.createElement('div');
-      fruitDiv.className = 'bg-[#D9EDC0] w-[90] lg:w-[70%] h-14 p-3 pl-7 font-bold text-lg';
-      fruitDiv.innerHTML = `
-          <h2>${fruit.name}</h2>`;
-      breweriesList.appendChild(fruitDiv);
+      const breweryDiv = document.createElement('div');
+      breweryDiv.className = 'bg-[#FFC567] w-[90] lg:w-[70%] h-14 p-3 pl-7 font-bold text-lg';
+      breweryDiv.innerHTML = `
+          <h2>${brewery.name}</h2>`;
+      breweriesList.appendChild(breweryDiv);
     });
   } else {
     console.error('Expected an array of fruits, got none');
