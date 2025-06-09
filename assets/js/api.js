@@ -45,7 +45,8 @@ const getList = async (entitySlug, apiRoot) => {
  * @returns Promise | Error
  */
 const getListBasedOnPaginationPage = async (entitySlug, pageNumber, apiRoot) => {
-    // create your own pagination logic here
+  const url = `${apiRoot}${entitySlug}?page=${pageNumber}&per_page=8`;
+  return await fetchData(url);
 };
 
 export { getOne, getList, getListBasedOnPaginationPage };

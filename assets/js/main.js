@@ -21,7 +21,7 @@ async function init() {
  */
 async function handleRequest() {
   // const brewery = await getOne(id,selectedCollection, apiRoot);
-  const breweries = await getList(selectedCollection, apiRoot);
+  const breweries = await getListBasedOnPaginationPage(selectedCollection, 7, apiRoot);
   // console.log(brewery);
   console.log(breweries);
   update(breweries);
