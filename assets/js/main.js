@@ -20,9 +20,9 @@ async function init() {
  * Function to handle the request from the API
  */
 async function handleRequest() {
-  // const fruit = await getOne('random',selectedCollection, apiRoot);
+  // const brewery = await getOne(id,selectedCollection, apiRoot);
   const breweries = await getList(selectedCollection, apiRoot);
-  // console.log(fruit);
+  // console.log(brewery);
   console.log(breweries);
   update(breweries);
 }
@@ -38,10 +38,19 @@ function update(data) {
   // Create a new div to display the brewery details
   if (Array.isArray(breweries)) {
     breweries.forEach(brewery => {
-      const breweryDiv = document.createElement('div');
-      breweryDiv.className = 'bg-[#FFC567] w-[90] lg:w-[70%] h-14 p-3 pl-7 font-bold text-lg';
-      breweryDiv.innerHTML = `
-          <h2>${brewery.name}</h2>`;
+      const breweryDiv = document.createElement('section');
+      breweryDiv.className = 'bg-[#FFC567] h-auto w-[90%] text-left p-2 m-3 font-bold text-xs';
+      breweryDiv.innerHTML = 
+      `<section class="flex flex-row">
+        <div class="basis-7/12">
+          <h2 class=" text-xs lg:text-3xl font-bold m-2 lg:m-0">${brewery.name}</h2>
+        </div>
+        <div class="basis-5/12">
+          <button class="bg-[#FF9D00] rounded-2xl w-32 h-6 p-2 lg:m-4 flex items-center justify-center">
+            <a class="text-center text-xs font-bold text-white" href="details.html">More Information</a>
+          </button>
+        </div>
+        </section>`;
       breweriesList.appendChild(breweryDiv);
     });
   } else {

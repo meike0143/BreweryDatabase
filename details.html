@@ -5,31 +5,42 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="./assets/css/style.css" rel="stylesheet">
-  <title>Health Database</title>
+  <title>Brewery Database - Details</title>
 </head>
 
-<body>
-  <main class="h-screen">
+<body class="bg-[#FFF6E5]">
+  <main>
     <header class="p-2 flex flex-row">
       <div class="basis-4/6 flex flex-row">
-        <img class="max-w-6 lg:scale-125 max-h-6 basis-1/6 mt-2" src="assets/img/mdi_leaf.jpg" alt="leaf">
-        <h1 class=" text-xl lg:text-3xl font-bold basis-5/6 m-2 lg:m-0">Health Database</h1>
+        <img class="max-w-6 lg:scale-125 max-h-6 basis-1/6 mt-2" src="assets/img/glass.png" alt="wine glass">
+        <h1 class=" text-xl lg:text-3xl font-bold basis-5/6 m-2 lg:m-0">Brewery Database</h1>
       </div>
-      <button class="basis-2/6 bg-[#72A853] rounded-2xl w-12 h-8 p-2 lg:m-4 flex items-center justify-center">
-        <a class="text-center font-bold" href="menu.html">Menu</a>
+      <button class="basis-2/6 bg-[#FF9D00] rounded-2xl w-12 h-8 p-2 lg:m-4 flex items-center justify-center">
+        <a class="text-center font-bold text-white" href="menu.html">Menu</a>
       </button>
     </header>
-    <section class="w-[90%] h-24 content-center relative left-[5%] p-4 bg-[#D9EDC0]">
-      <p class="text-xs w-72">Welcome to Health database! Here you can learn all about every type of fruit. Their family and nutritions are especially helpful. </p>
+    <section class="w-[90%] h-24 content-center relative left-[5%] p-4 bg-[#FFC567]">
+      <p class="text-xs w-72">Welcome to Brewery database! Here you can learn all about every brewery. Their cities, country and brewery types are esprecially helpful.</p>
     </section>
     <hr class="m-2 border-2 rounded-lg">
     
-    <footer class="bg-[#D9EDC0] h-16 fixed bottom-0 w-full flex items-center justify-center px-4">
-      <div class="flex items-center space-x-2 text-xs font-bold">
-        <span>Health Database 2025 | Details</span>
+    <article class="bg-[#FFC567] h-auto w-[80%] p-2 m-2 relative left-[8%] top-40">
+      <section class="flex flex-row">
+        <div class="basis-11/12" id="brewery"></div>
+        <div class="basis-1/12">
+          <button class="bg-white w-6 h-6 p-2 lg:m-4 flex items-center justify-center">
+            <a class="text-center text-md font-bold text-black" href="javascript:history.back()">X</a>
+          </button>
+        </div>
+        </section>
+    </article>
+
+    <footer class="bg-[#FFC567] h-16 fixed bottom-0 w-full flex items-center justify-center px-4">
+      <section class="flex items-center space-x-2 text-xs font-bold">
+        <span>Health Database 2025 | Home</span>
         <img class="max-w-6 max-h-6 lg:scale-125" src="assets/img/new_scales.png" alt="scales">
         <span>License: MIT</span>
-      </div>
+      </section>
     </footer>
   </main>
   <script type="module" src="./assets/js/main.js"></script>
