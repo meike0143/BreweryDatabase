@@ -21,7 +21,7 @@ const fetchData = async (url) => {
    * @param apiRoot - The API's root URL
    * @returns Promise| Error
    */
-const getOne = async (id, entitySlug, apiRoot) => {
+const getOne = async (entitySlug, apiRoot, id) => {
     const url = id === 'random' ? `${apiRoot}${entitySlug}/random` : 
     `${apiRoot}${entitySlug}/${id}`;
     return await fetchData(url);
@@ -33,8 +33,8 @@ const getOne = async (id, entitySlug, apiRoot) => {
  * @param apiRoot - The API's root URL
  * @returns Promise | Error>
  */
-const getList = async (entitySlug, apiRoot) => {
-   const url = `${apiRoot}${entitySlug}`;
+const getBreweryTypes = async (entitySlug, apiRoot, chosenType) => {
+   const url = `${apiRoot}${entitySlug}?by_type=${chosenType}`;
   return await fetchData(url);
 };
 
@@ -45,7 +45,8 @@ const getList = async (entitySlug, apiRoot) => {
  * @returns Promise | Error
  */
 const getListBasedOnPaginationPage = async (entitySlug, pageNumber, apiRoot) => {
-    // create your own pagination logic here
+  const url = `${apiRoot}${entitySlug}?page=${pageNumber}&per_page=8`;
+  return await fetchData(url);
 };
 
-export { getOne, getList, getListBasedOnPaginationPage };
+export { getOne, getBreweryTypes, getListBasedOnPaginationPage };
