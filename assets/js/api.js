@@ -28,17 +28,6 @@ const getOne = async (entitySlug, apiRoot, id) => {
 };
 
 /**
- * Fetches a list of items from the API
- * @param entitySlug - The entity's slug
- * @param apiRoot - The API's root URL
- * @returns Promise | Error>
- */
-const getBreweryTypes = async (entitySlug, apiRoot, chosenType) => {
-   const url = `${apiRoot}${entitySlug}?by_type=${chosenType}`;
-  return await fetchData(url);
-};
-
-/**
  * Fetches paginated data from the API based on page number
  * @param entitySlug - The entity's slug
  * @param pageNumber - The page number to fetch
@@ -49,4 +38,4 @@ const getListBasedOnPaginationPage = async (entitySlug, pageNumber, apiRoot) => 
   return await fetchData(url);
 };
 
-export { getOne, getBreweryTypes, getListBasedOnPaginationPage };
+export { getOne, getListBasedOnPaginationPage };
