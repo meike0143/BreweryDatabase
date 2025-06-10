@@ -45,7 +45,6 @@ async function handleBreweryRequest(breweryId) {
 function updateBreweryList(data) {
   const breweries = data.data; // Assuming the data is returned as an array with a single object
   const breweriesList = document.getElementById('breweries');
-  console.log(breweriesList);
   breweriesList.innerHTML = ''; // Clear any existing content
 
   // Create a new div to display the brewery details
@@ -77,7 +76,6 @@ function updateBreweryList(data) {
 function updateBrewery(data) {
   const brewery = data.data; // Assuming the data is returned as an array with a single object
   const breweryInfo = document.getElementById('brewery');
-  console.log(breweryInfo)
   breweryInfo.innerHTML = ''; // Clear any existing content
 
   // Create a new div to display the brewery details
