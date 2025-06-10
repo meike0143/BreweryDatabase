@@ -7,6 +7,12 @@ import { getOne, getListBasedOnPaginationPage } from './api.js';
 let apiRoot = 'https://api.openbrewerydb.org/v1/';
 let selectedCollection = 'breweries';
 
+async function init() {
+  // Logic to initialize the application upon starting
+  console.info('Initializing the application');
+  handleListRequest();
+}
+
 /**
  * Displays an error message on the page
  * @param error - Contains the message to display
@@ -39,6 +45,7 @@ async function handleBreweryRequest(breweryId) {
 function updateBreweryList(data) {
   const breweries = data.data; // Assuming the data is returned as an array with a single object
   const breweriesList = document.getElementById('breweries');
+  console.log(breweriesList);
   breweriesList.innerHTML = ''; // Clear any existing content
 
   // Create a new div to display the brewery details
@@ -70,6 +77,7 @@ function updateBreweryList(data) {
 function updateBrewery(data) {
   const brewery = data.data; // Assuming the data is returned as an array with a single object
   const breweryInfo = document.getElementById('brewery');
+  console.log(breweryInfo)
   breweryInfo.innerHTML = ''; // Clear any existing content
 
   // Create a new div to display the brewery details
@@ -90,7 +98,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const path = window.location.pathname;
     const urlParams = new URLSearchParams(window.location.search);
     try {
-        if (path.includes('index.html') || path.includes('/')) {
+        if (path.includes('index.html')) {
             handleListRequest();
         } else if (path.includes('details.html')) {
             const breweryId = urlParams.get('breweryId');
@@ -101,3 +109,5 @@ document.addEventListener('DOMContentLoaded', async () => {
       displayError(error);
     }
 });
+
+init();
