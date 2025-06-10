@@ -58,8 +58,9 @@ function updateBreweryList(data) {
           <h2 class=" text-xs lg:text-3xl font-bold m-2 lg:m-0">${brewery.name}</h2>
         </div>
         <div class="basis-5/12">
-          <button class="bg-[#FF9D00] rounded-2xl w-32 h-6 p-2 lg:m-4 flex items-center justify-center">
-            <a class="text-center text-xs font-bold text-white" href="details.html?breweryId=${brewery.id}">More Information</a>
+          <button class="bg-[#FF9D00] rounded-2xl w-32 h-6 p-2 lg:m-4 flex items-center justify-center font-bold text-white" 
+          onclick="window.location.href='details.html?breweryId=${brewery.id}';">
+            More Information
           </button>
         </div>
         </section>`;

@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="./assets/css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/glass.png" />
   <title>Brewery Database - Menu</title>
 </head>
 
@@ -15,8 +16,9 @@
         <img class="max-w-6 lg:scale-125 max-h-6 basis-1/6 mt-2" src="assets/img/glass.png" alt="wine glass">
         <h1 class=" text-xl lg:text-3xl font-bold basis-5/6 m-2 lg:m-0">Brewery Database</h1>
       </div>
-      <button class="basis-2/6 bg-[#FF9D00] rounded-2xl w-12 h-8 p-2 lg:m-4 flex items-center justify-center">
-        <a class="text-center font-bold text-white" href="javascript:history.back()">Close menu</a>
+      <button class="basis-2/6 bg-[#FF9D00] rounded-2xl w-12 h-8 p-2 lg:m-4 flex items-center justify-center font-bold text-white" 
+      onclick="window.location.href='javascript:history.back()';">
+        Close menu
       </button>
     </header>
     <section class="w-[90%] h-24 content-center relative left-[5%] p-4 bg-[#FFC567]">
@@ -24,11 +26,11 @@
     </section>
     <hr class="m-2 border-2 rounded-lg border-black">
     <section class="grid grid-cols-1 p-5 lg:pt-20 w-full gap-20 place-items-center fixed top-80">
-      <button class="bg-[#FFC567] w-[90%] lg:w-[70%] h-16 p-2 font-bold text-lg">
-        <a href="index.html">Home</a>
+      <button class="bg-[#FFC567] w-[90%] lg:w-[70%] h-16 p-2 font-bold text-lg" onclick="window.location.href='index.html';">
+        Home
       </button>
-      <button class="bg-[#FFC567] w-[90%] lg:w-[70%] h-16 p-2 font-bold text-lg">
-        <a href="about.html">About</a>
+      <button class="bg-[#FFC567] w-[90%] lg:w-[70%] h-16 p-2 font-bold text-lg" onclick="window.location.href='about.html';">
+        About
       </button>
     </section>
 

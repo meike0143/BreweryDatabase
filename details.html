@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="./assets/css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/glass.png" />
   <title>Brewery Database - Details</title>
 </head>
 
@@ -15,8 +16,9 @@
         <img class="max-w-6 lg:scale-125 max-h-6 basis-1/6 mt-2" src="assets/img/glass.png" alt="wine glass">
         <h1 class=" text-xl lg:text-3xl font-bold basis-5/6 m-2 lg:m-0">Brewery Database</h1>
       </div>
-      <button class="basis-2/6 bg-[#FF9D00] rounded-2xl w-12 h-8 p-2 lg:m-4 flex items-center justify-center">
-        <a class="text-center font-bold text-white" href="menu.html">Menu</a>
+      <button class="basis-2/6 bg-[#FF9D00] rounded-2xl w-12 h-8 p-2 lg:m-4 flex items-center justify-center text-white font-bold" 
+      onclick="window.location.href='menu.html';">
+        Menu
       </button>
     </header>
     <section class="w-[90%] h-24 content-center relative left-[5%] p-4 bg-[#FFC567]">
@@ -28,8 +30,9 @@
       <section class="flex flex-row">
         <div class="basis-11/12" id="brewery"></div>
         <div class="basis-1/12">
-          <button class="bg-white w-6 h-6 p-2 lg:m-4 flex items-center justify-center">
-            <a class="text-center text-md font-bold text-black" href="javascript:history.back()">X</a>
+          <button class="bg-white w-6 h-6 p-2 lg:m-4 flex items-center justify-center font-bold" 
+          onclick="window.location.href='javascript:history.back()';">
+            X
           </button>
         </div>
         </section>
