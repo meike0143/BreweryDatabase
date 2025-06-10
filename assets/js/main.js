@@ -58,8 +58,9 @@ function updateBreweryList(data) {
           <h2 class=" text-xs lg:text-3xl font-bold m-2 lg:m-0">${brewery.name}</h2>
         </div>
         <div class="basis-5/12">
-          <button class="bg-[#FF9D00] rounded-2xl w-32 h-6 p-2 lg:m-4 flex items-center justify-center">
-            <a class="text-center text-xs font-bold text-white" href="details.html?breweryId=${brewery.id}">More Information</a>
+          <button class="bg-[#FF9D00] rounded-2xl w-32 h-6 p-2 lg:m-4 flex items-center justify-center font-bold text-white" 
+          onclick="window.location.href='details.html?breweryId=${brewery.id}';">
+            More Information
           </button>
         </div>
         </section>`;
@@ -80,12 +81,20 @@ function updateBrewery(data) {
 
   // Create a new div to display the brewery details
   const breweryDiv = document.createElement('section');
-  breweryDiv.className = 'bg-[#FFC567] h-auto w-[90%] text-left p-2 m-3 font-bold text-xs';
+  breweryDiv.className = 'bg-[#FFC567] h-auto w-[90%] text-left p-2 m-3 text-xs';
   breweryDiv.innerHTML = 
   `<section>
     <div>
-      <h2 class=" text-xs lg:text-3xl font-bold m-2 lg:m-0">${brewery.name}</h2>
-      <p> Country: ${brewery.country}<p>
+      <h2 class="text-sm lg:text-3xl font-bold lg:m-0">${brewery.name}</h2>
+      <br>
+      <p class="text-xs"> <strong>Country:</strong> ${brewery.country}<p>
+      <p class="text-xs"> <strong>State:</strong> ${brewery.state}<p>
+      <p class="text-xs"> <strong>State Province:</strong> ${brewery.state_province}<p>
+      <p class="text-xs"> <strong>City:</strong> ${brewery.city}<p>
+      <p class="text-xs"> <strong>Street:</strong> ${brewery.street}<p>
+      <br>
+      <p class="text-xs"> <strong>Brewery type:</strong> ${brewery.brewery_type}<p>
+      <p class="text-xs"> <strong>Postal Code:</strong> ${brewery.postal_code}<p>
     </div>
     </section>`;
   breweryInfo.appendChild(breweryDiv);
