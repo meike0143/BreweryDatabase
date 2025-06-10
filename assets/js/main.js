@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const path = window.location.pathname;
     const urlParams = new URLSearchParams(window.location.search);
     try {
-        if (path.includes('index.html')) {
+        if (path.includes('index.html') || path.includes('/')) {
             handleListRequest();
         } else if (path.includes('details.html')) {
             const breweryId = urlParams.get('breweryId');
