@@ -1,4 +1,4 @@
-# Health Database Website
+# Brewery Database Website
 
 ## Contributors
 * **Meike Martens** - *Development* - [meike0143](https://github.com/meike0143)
