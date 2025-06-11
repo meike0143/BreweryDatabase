@@ -34,7 +34,7 @@ const getOne = async (entitySlug, apiRoot, id) => {
  * @returns Promise | Error
  */
 const getListBasedOnPaginationPage = async (entitySlug, pageNumber, apiRoot) => {
-  const url = `${apiRoot}${entitySlug}?page=${pageNumber}&per_page=8`;
+  const url = `${apiRoot}${entitySlug}?page=${pageNumber}&per_page=12`;
   return await fetchData(url);
 };
 
