@@ -1,0 +1,31 @@
+name: Brewery Database
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # Step 3: Install Dependencies
+      - name: Install Dependencies
+        run: npm install
+        continue-on-error: false
+
+      # Step 4: Build the SvelteKit Application
+      - name: Build Application
+        run: npm run build
+        continue-on-error: false
