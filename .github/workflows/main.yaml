@@ -1,4 +1,4 @@
-name: Brewery Database
+name: Brewery Database Deployment
 
 # Controls when the workflow will run
 on:
