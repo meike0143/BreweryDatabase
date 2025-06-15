@@ -7,7 +7,7 @@ With my previous, originally approved API I ran into CORS issues, which after tr
 
 **You can find this API at:** https://www.openbrewerydb.org/
 
-## Designs (created prior to development)
+## Designs
 ### Mobile
 ![API Mobile Design](https://github.com/user-attachments/assets/b03ef192-a312-4619-8179-34990fffea85)
 ### Desktop
