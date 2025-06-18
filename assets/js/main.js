@@ -92,9 +92,10 @@ function updateBrewery(data) {
       <p class="text-xs lg:text-base"> <strong>State Province:</strong> ${brewery.state_province}<p>
       <p class="text-xs lg:text-base"> <strong>City:</strong> ${brewery.city}<p>
       <p class="text-xs lg:text-base"> <strong>Street:</strong> ${brewery.street}<p>
-      <br>
-      <p class="text-xs lg:text-base"> <strong>Brewery type:</strong> ${brewery.brewery_type}<p>
-      <p class="text-xs lg:text-base"> <strong>Postal Code:</strong> ${brewery.postal_code}<p>
+      <aside class="mt-2">
+        <p class="text-xs lg:text-base"> <strong>Brewery type:</strong> ${brewery.brewery_type}<p>
+        <p class="text-xs lg:text-base"> <strong>Postal Code:</strong> ${brewery.postal_code}<p>
+      </aside>
     </div>
     </section>`;
   breweryInfo.appendChild(breweryDiv);
